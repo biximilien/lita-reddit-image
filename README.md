@@ -1,8 +1,6 @@
 # lita-reddit-image
 
-Lita handler for querying images from Reddit
-
-TODO: Add a description of the plugin.
+Lita handler for querying images from Reddit.
 
 ## Installation
 
@@ -14,8 +12,28 @@ gem "lita-reddit-image"
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+Only 2 required parameters:
+* Your Reddit username
+* Your Reddit App Id
+
+Create a new Reddit App and get an App Id.
+
+Your username is used in the User-Agent headers for querying the Reddit API, as
+requested by Reddit developers.
+
+```ruby
+Lita.configure do |config|
+  config.handlers.reddit_image.app_id = "reddit_developer_app_id"
+  config.handlers.reddit_image.username = "reddit_username"
+end
+```
 
 ## Usage
 
-TODO: Describe the plugin's features and how to use them.
+Use the following syntax: `/r/[subreddit] [query]` to fetch an image from Reddit.
+
+Ex.
+
+```
+Lita /r/aww Bunny
+```
