@@ -32,7 +32,7 @@ end
 
 Use the following syntax: `/r/[subreddit] [query]` to fetch an image from Reddit.
 
-Ex.
+Ex. Get a nice happy bunny from /r/aww 🐇
 
 ```
 Lita /r/aww Bunny

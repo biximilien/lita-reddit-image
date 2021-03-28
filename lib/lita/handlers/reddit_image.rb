@@ -37,6 +37,7 @@ module Lita
           sleep 0.5
         rescue StandardError => e
           Lita.logger.warn("Couldn't fetch image from Reddit: " + e.message)
+          response.reply("I couldn't fetch an image from Reddit.")
         end
       end
 
